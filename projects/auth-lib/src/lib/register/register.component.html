@@ -1,0 +1,71 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 form-div shadow bg-white rounded">
+            <div class="row">
+                <div class="col-6 form-photo"></div>
+                <div class="col-6 form-login">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <h4>Welcome to the <span class="text-primary">Boncoin</span></h4>
+                            <form [formGroup] = "registerForm">
+                                <div class="form-group">
+                                    <label for="mail">Email</label>
+                                    <input type="email" id="email" class="form-control" formControlName="email" aria-describedby="emailHelp" required>
+                                    <small id="emailHelp" class="form-text text-danger" *ngIf="!!f.email.invalid && !!f.email.touched">Email invalid</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nameI">Nom</label>
+                                    <input type="text" id="nameI" class="form-control" formControlName="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="surnameI">Prenom</label>
+                                    <input type="text" id="surnameI" class="form-control" formControlName="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cityI">Ville de résidence</label>
+                                    <input type="text" id="cityI" class="form-control" formControlName="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateI">Date de naissance</label>
+                                    <input type="date" id="dateI" class="form-control" formControlName="birthDate" aria-describedby="dateHelp" required>
+                                    <small id="dateHelp" class="form-text text-danger" *ngIf="!!f.birthDate.invalid && !!f.birthDate.touched">Date invalid</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Password</label>
+                                    <input type="password" id="pass" class="form-control" formControlName="password" aria-describedby="passHelp" required>
+                                    <small id="passHelp" class="form-text text-danger" *ngIf="!!f.password.invalid && !!f.password.touched">Password invalid</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Confirm Password</label>
+                                    <input type="password" id="cpass" class="form-control" formControlName="cPassword" aria-describedby="cpassHelp" required>
+                                    <small id="cpassHelp" class="form-text text-danger" *ngIf="!!f.cPassword.invalid && !!f.cPassword.touched && !!f.cPassword.errors.NoPassswordMatch">Passwords must match</small>
+                                    <small id="cpassHelp" class="form-text text-danger" *ngIf="!!f.cPassword.invalid && !!f.cPassword.touched && !(!!f.cPassword.errors.NoPassswordMatch)">Password is required</small>
+                                </div>
+
+                                <h6 class="text-center mb-3"><a href="auth/forgot-password">Forgot password?</a></h6>
+                                <!-- <div class="form-row mb-3">
+                                    <div class="col-6">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Se souvenir de moi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <a href="auth/forgot-password">Forgot password?</a>
+                                    </div>
+                                </div> -->
+                                <button class="btn btn-primary btn-lg btn-block text-center mb-3" [disabled]="registerForm.invalid">Create your account</button>
+                                <a href="auth/login" class="text-center">Already have an account? Login</a>
+                            </form>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>

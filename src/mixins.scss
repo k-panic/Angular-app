@@ -1,0 +1,6 @@
+@mixin background-img() {
+    // background-image: url('src/assets/bg-login.PNG');    /*'assets/bg-login.PNG');*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

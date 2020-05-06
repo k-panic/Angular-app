@@ -1,0 +1,55 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 form-div shadow bg-white rounded">
+            <div class="row">
+                <div class="col-6 form-photo"></div>
+                <div class="col-6 form-login">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <h4>Welcome to the <span class="text-primary">Boncoin</span></h4>
+                            <form [formGroup] = "loginForm">
+                                <div class="form-group">
+                                    <label for="mail">Email</label>
+                                    <input type="email" id="email" class="form-control" formControlName="email" aria-describedby="emailHelp" required>
+                                    <small id="emailHelp" class="form-text text-danger" *ngIf="!!f.email.invalid && !!f.email.touched">Email invalid</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Password</label>
+                                    <input type="password" id="pass" class="form-control" formControlName="password" aria-describedby="passHelp" required>
+                                    <small id="passHelp" class="form-text text-danger" *ngIf="!!f.password.invalid && !!f.password.touched">Password invalid</small>
+                                </div>
+                                <h6 class="text-center mb-3"><a href="auth/forgot-password">Forgot password?</a></h6>
+                                <!-- <div class="form-row mb-3">
+                                    <div class="col-6">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Se souvenir de moi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <a href="auth/forgot-password">Forgot password?</a>
+                                    </div>
+                                </div> -->
+                                <button class="btn btn-primary btn-lg btn-block text-center mb-3" [disabled]="loginForm.invalid">Log in</button>
+                                <a href="auth/register" class="text-center">No account? Please sign up</a>
+                                <!-- <div class="form-row mt-5">
+                                    <div class="col">
+                                        <button class="btn btn-primary btn-md btn-block text-center" [disabled]="loginForm.invalid" (click)="onSubmit()">Log in</button>
+                                    </div>
+                                    <div class="col">
+                                        <a href="auth/register" class="btn btn-light btn-md btn-block text-center" role="button">Create an account</a>
+                                    </div>                                    
+                                </div> -->
+                            </form>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>

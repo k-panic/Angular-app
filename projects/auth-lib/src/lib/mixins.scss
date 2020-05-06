@@ -1,0 +1,42 @@
+
+@mixin background-img() {
+    //background-image: url('C:/Users/Amadou/Desktop/Angular/boncoin/frontend/boncoin-workspace/src/assets/bg-login.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form-control {
+    margin: 0;
+    padding: 20px;
+}
+
+.form-group {
+    margin: 0;
+    padding: 0;
+}
+
+.form-div {
+    border: 0.5px solid #c7c1c1;
+    .form-login{
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+}
+
+.form-photo {
+    @include background-img();
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}

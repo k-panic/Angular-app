@@ -14,7 +14,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "auth-lib": [
+        "dist/auth-lib/auth-lib",
+        "dist/auth-lib"
+      ],
+      "service-lib": [
+        "dist/service-lib/service-lib",
+        "dist/service-lib"
+      ],
+      "validators-lib": [
+        "dist/validators-lib/validators-lib",
+        "dist/validators-lib"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
