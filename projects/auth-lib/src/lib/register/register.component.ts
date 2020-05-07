@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'service-lib';
-import * as customValidator from 'validators-lib';
+import { AuthService } from 'projects/service-lib/src/public-api';
+// import * as customValidator from 'validators-lib';
 
 @Component({
   selector: 'auth-register',
