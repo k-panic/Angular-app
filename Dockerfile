@@ -1,3 +1,5 @@
+# This is a multistage
+
 # Stage node build
 FROM node:13.14.0 as angul
 RUN mkdir -p /usr/src/app
